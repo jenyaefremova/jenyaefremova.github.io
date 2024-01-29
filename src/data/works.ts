@@ -3,15 +3,15 @@ import { IWork} from '../models'
 export const works: IWork[] = [
   {
     id: 1,
-    title: 'Landing 1',
-    description: 'Your perfect pack for everyday use and walks in the forest.',
+    title: 'Landing 1. Leicester City',
+    description: 'Адаптивный лендинг с анимацией на GSAP',
     image: 'https://landing-lc.firebaseapp.com/img/leicester-lead/vardy.png',
     link: 'https://landing-lc.firebaseapp.com/'
   },
   {
     id: 2,
-    title: 'Land 2 Flat design',
-    description: 'Your perfect pack for everyday use and walks in the forest.',
+    title: 'Landing 2. Flat design',
+    description: 'Адаптивный лендинг с использованием SASS, flexbox, БЭМ',
     image: 'https://jenyaefremova.github.io/flatdesign/src/img/hero/hero-image.png',
     link: 'https://jenyaefremova.github.io/flatdesign/src/'
   },
@@ -31,15 +31,15 @@ export const works: IWork[] = [
   },
   {
     id: 5,
-    title: 'Richmedia 1',
-    description: 'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday',
+    title: 'Richmedia',
+    description: 'Игровая ричмедия (открывается при клике на пуш в приложении)',
     image: 'https://i.imgur.com/cmnMmJV.png',
     link: 'https://jenyaefremova.github.io/richmedia1/'
   },
   {
     id: 6,
     title: 'Email',
-    description: 'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday',
+    description: 'Письмо, которое будет красиво везде - и на мобилке, и в аутлуке',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNIaZioEkECBAuvZzG_qdOEhEhSa5S8lTxOQ&usqp=CAU',
     link: 'https://jenyaefremova.github.io/email1/'
   },

@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { ITechnology } from '../models'
+import { ITechnology } from '../../models';
+import { getTechnologyIcon } from './getTechnologyIcon';
 
 interface TechnologyProps {
   technologies: ITechnology[];
@@ -11,10 +12,10 @@ export function Technology({ technologies, className }: TechnologyProps) {
   return (
     <ul className={className}>
       { technologies.map(technology => 
-      <li className='flex gap-x-2 items-center pb-3' key={technology.title}>
-        <img width="24" height="24" src={technology.image} alt={technology.title}/>
-        <p>{technology.title}</p>
-      </li>) }
+        <li className='flex gap-x-2 items-center pb-3' key={technology.title}>
+          {getTechnologyIcon(technology.icon)}
+          <p>{technology.title}</p>
+        </li>) }
     </ul>
   )
 }
