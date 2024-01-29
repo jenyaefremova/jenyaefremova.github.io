@@ -44,7 +44,7 @@ export function Education({ education }: EducationProps) {
         <div className='flex lg:gap-10'>
           {education.place.map(place => (
             <div
-              className='flex flex-col flex-[0_0_100%] lg:flex-[0_1_auto] lg:w-1/3 items-top mt-5 lg:gap-x-10 py-5 px-5 bg-slate-100 shadow-lg rounded-md min-w-0 mr-20 last:mr-0 lg:mr-0'
+              className='flex flex-col flex-[0_0_100%] lg:flex-[0_1_auto] lg:w-1/3 items-top mt-5 lg:gap-x-10 py-5 px-5 bg-slate-100 shadow-lg rounded-md min-w-0 mr-20 lg:mr-0'
               key={place.id}
             >
               <p className='text-gray-400'>{place.dates}</p>
