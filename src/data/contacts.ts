@@ -26,7 +26,7 @@ export const contacts: IContacts = {
     {
       id: 1,
       title: 'github',
-      link: 'https://jenyaefremova.github.io/portfolio/'
+      link: 'https://github.com/jenyaefremova'
     },
     {
       id: 3,
