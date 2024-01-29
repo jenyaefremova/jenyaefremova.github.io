@@ -30,7 +30,7 @@ export interface IPerson {
 export interface ITechnology {
   id?: number;
   title: string;
-  image: string;
+  icon: string;
 }
 
 export interface IResponsibility {

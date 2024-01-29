@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {IProduct} from '../models'
 import axios from 'axios'
-import {ErrorMessage} from './ErrorMessage'
+import {ErrorMessage} from './shared/ErrorMessage'
 import { Button } from './shared/Button/Button'
 
 const productData: IProduct =  {

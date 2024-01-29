@@ -1,4 +1,4 @@
-import { IExperience } from "../models";
+import { IExperience } from '../models';
 
 export const experience: IExperience = {
   id: 1,

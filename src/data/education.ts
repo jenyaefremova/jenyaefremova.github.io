@@ -1,17 +1,17 @@
-import { IEducation } from "../models";
+import { IEducation } from '../models';
 
 export const education: IEducation = 
   {
     id: 1,
     title: 'Education',
     place: [
-    {
+      {
         id: 1,
         placeTitle: 'JavaScript',
         dates: 'Июнь 2022 - Август 2022',
         description: 
         'Основы JS такие как объекты, классы, массивы и функции, обработчики событий, DOM-модель'
-        },
+      },
       {
         id: 2,
         placeTitle: 'Академия вёрстки Артёма Исламова',
@@ -26,4 +26,3 @@ export const education: IEducation =
       }
     ]
   }
-
