@@ -32,8 +32,8 @@ export function Contacts({ contacts, className }: ContactsProps) {
           ) }
         </ul>
         <Button 
-          asLink 
-          href='https://drive.google.com/uc?export=download&id=1SMHjYgxMnrEOqbrm68kd27trSkvq6f1H' 
+          asLink
+          href='https://drive.google.com/uc?export=download&id=1c37iTYNM--nty7sz1mDR8niTWrKEnWg_' 
           download
           fluid
           variant='primary' 

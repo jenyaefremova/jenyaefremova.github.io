@@ -13,6 +13,6 @@ export const person: IPerson =
     },
     additionalButton: {
       text: 'Скачать резюме',
-      link: 'https://t.me/avocadohaas'
+      link: 'https://drive.google.com/uc?export=download&id=1c37iTYNM--nty7sz1mDR8niTWrKEnWg_'
     }
   }
