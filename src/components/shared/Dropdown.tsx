@@ -18,8 +18,6 @@ const Dropdown: React.FC<DropdownProps> = ({ options, className, onSelect }) => 
 
   const dropDownClasses = ['w-60 flex flex-col items-start', className];
 
-  console.log('selectedOption',selectedOption);
-
   return (
     <div className={dropDownClasses.join(' ')}>
       <button className="border px-4 py-2 w-full text-left" onClick={() => setIsOpen(!isOpen)}>
