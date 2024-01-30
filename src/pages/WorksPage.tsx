@@ -10,7 +10,7 @@ export function WorksPage() {
   return (
     <Container>
       <Works works={works} />
-      <Contacts contacts={contacts} />
+      <Contacts contacts={contacts} className='pt-10 lg:pt-20' />
     </Container>
   )
 }
