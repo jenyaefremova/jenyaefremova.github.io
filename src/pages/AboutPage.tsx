@@ -8,14 +8,15 @@ import { contacts } from '../data/contacts'
 import { Experience } from '../components/Experience'
 import { Education } from '../components/Education'
 import { Contacts } from '../components/Contacts'
+import { Container } from '../components/shared/Container'
 
 export function AboutPage() {
   return (
-    <div className='container mx-auto px-5 pb-20'>
+    <Container className='pt-12 sm:pt-12'>
       <Hero person={person} technologies={technologies}/>
       <Experience experience={experience} />
       <Education education={education} />
       <Contacts contacts={contacts}/>
-    </div>
+    </Container>
   )
 }

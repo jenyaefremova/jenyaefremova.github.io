@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { CartContext } from '../context/CartContext';
 import { SectionHeadline } from '../components/shared/Typography/SectionHeadline';
 import { Button } from '../components/shared/Button/Button';
@@ -9,6 +9,7 @@ import { ModalContext } from '../context/ModalContext';
 import { Modal } from '../components/shared/Modal';
 import useCartQuantity from '../hooks/useCartQuantity';
 import useMobile from '../hooks/useMobile';
+import { Container } from '../components/shared/Container';
 
 const CartPage: React.FC = () => {
   const { cartItems } = useContext(CartContext);
@@ -27,9 +28,13 @@ const CartPage: React.FC = () => {
   const { incrementQuantity, decrementQuantity } = useCartQuantity();
   const isMobile = useMobile();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="container mx-auto px-5 pb-40">
-      <SectionHeadline sectionHeadline='Cart Items' className='mt-20' />
+    <Container>
+      <SectionHeadline sectionHeadline='Cart Items' />
       {cartItems.length === 0 ? 
         <>
           <p className='mt-10'>Your cart is empty</p>
@@ -42,11 +47,11 @@ const CartPage: React.FC = () => {
         </>
         :
         <>
-          <ul className='pt-10'>
+          <ul className='sm:pt-10'>
             {Object.values(groupedItems).map(item => (
               <li key={item.id} className='flex flex-col sm:flex-row items-top justify-between border-b last:border-none py-8 sm:py-4 max-w-3xl'>
                 <div className='flex gap-6 sm:gap-0 sm:w-3/4'>
-                  <img src={item.image} alt={item.title} className='w-16 h-16 sm:w-12 sm:h-12 sm:mr-4' />
+                  <img src={item.image} alt={item.title} className='w-16 h-16 sm:w-12 sm:h-12 sm:mr-4 object-contain' />
                   <div className='w-3/4'>
                     <h4>{item.title}</h4>
                     <p>${item.price} x {item.quantity}</p>
@@ -58,7 +63,7 @@ const CartPage: React.FC = () => {
                           noPadding 
                           className='h-8 w-8' 
                           onClick={() => decrementQuantity(item)}/>
-                        <span className='mx-4'>{item.quantity}</span>
+                        <span className='inline-flex justify-center w-12'>{item.quantity}</span>
                         <Button 
                           text="+" 
                           variant='secondary' 
@@ -79,7 +84,7 @@ const CartPage: React.FC = () => {
                         noPadding 
                         className='h-8 w-8' 
                         onClick={() => decrementQuantity(item)}/>
-                      <span className='mx-4'>{item.quantity}</span>
+                      <span className='inline-flex justify-center w-12'>{item.quantity}</span>
                       <Button 
                         text="+" 
                         variant='secondary' 
@@ -110,7 +115,7 @@ const CartPage: React.FC = () => {
           />
         </>
       }
-    </div>
+    </Container>
   );
 };
 

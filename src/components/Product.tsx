@@ -18,7 +18,7 @@ export function Product({ product, onAddToCart, onIncrement, onDecrement, quanti
       <img 
         src={product.image} 
         alt={product.title} 
-        className='w-full transition-all object-contain bg-white p-4 h-80 hover:scale-90'
+        className='w-full transition-all duration-300 object-contain bg-white p-4 h-80 hover:scale-90'
       />
       <div className='flex flex-col justify-between p-4 pb-8 relative transition-all border-t'>
         <h4 className='py-2 text-lg truncate'>{product.title}</h4>
@@ -29,7 +29,7 @@ export function Product({ product, onAddToCart, onIncrement, onDecrement, quanti
           ) : (
             <div>
               <Button text="-" onClick={onDecrement} variant='secondary' className='h-12 w-12' />
-              <span className='mx-4'>{quantity}</span>
+              <span className='inline-flex justify-center px-4 w-12'>{quantity}</span>
               <Button text="+" onClick={onIncrement} variant='secondary' className='h-12 w-12'/>
             </div>
           )}

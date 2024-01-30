@@ -10,6 +10,7 @@ import { Button } from '../components/shared/Button/Button';
 import Dropdown from '../components/shared/Dropdown';
 import useSortedProducts from '../hooks/useSortedProducts';
 import useCartQuantity from '../hooks/useCartQuantity';
+import { Container } from '../components/shared/Container';
 
 export function ProductsPage() {
   const { loading, error, products } = useProducts();
@@ -41,14 +42,14 @@ export function ProductsPage() {
   };
 
   return (
-    <div className="container mx-auto px-5 sm:px-10 pb-40">
+    <Container>
       {error && <ErrorMessage error={error} />}
-      <Dropdown
+      {!error && ( <Dropdown
         options={sortOptions.map(option => option.label)}
-        className='mt-10 absolute min-w-40'
+        className='absolute min-w-40'
         onSelect={handleSortOptionClick}
-      />
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 items-stretch gap-12 lg:gap-8 pt-28 h-full">
+      />)}
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 items-stretch gap-12 lg:gap-8 pt-16 h-full">
         {loading ? (
           Array.from({ length: 20 }, (_, index) => <Loader key={index} />)
         ) : (
@@ -66,7 +67,7 @@ export function ProductsPage() {
         )}
       </div>
 
-      <div className="fixed bottom-6 right-6 sm:bottom-10 sm:right-10">
+      {!error && (<div className="fixed bottom-6 right-6 sm:bottom-10 sm:right-10">
         <Button
           onClick={handleCartButtonClick}
           text={'\u{1F6D2}'}
@@ -75,8 +76,8 @@ export function ProductsPage() {
         />
         {cartCount > 0 && ( <span className='absolute bottom-8 left-8 bg-lime-600 px-2 rounded-full'>{String(cartCount)}</span>)}
       
-      </div>
+      </div>)}
       
-    </div>
+    </Container>
   );
 }
