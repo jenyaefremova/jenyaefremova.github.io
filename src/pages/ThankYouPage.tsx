@@ -14,7 +14,7 @@ const ThankYouPage: React.FC = () => {
   return (
     <Container>
       <SectionHeadline sectionHeadline='Thank You' />
-      <p className='pt-4'>Your order has been successfully sent.</p>
+      <p className='pt-4'>Your order has been successfully sent. I recieved it in telegram</p>
       <Button 
         onClick={handleButtonClick} 
         text='Back to Shopping' 
