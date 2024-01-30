@@ -23,7 +23,7 @@ export function Hero({ person, technologies }: PersonProps) {
         {person.additionalButton && (
           <Button
             asLink
-            href='https://drive.google.com/uc?export=download&id=1SMHjYgxMnrEOqbrm68kd27trSkvq6f1H'
+            href={person.additionalButton.link}
             download
             fluid
             variant='secondary'

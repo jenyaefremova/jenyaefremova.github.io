@@ -6,8 +6,6 @@ export const contacts: IContacts = {
   description: 'Если у вас есть какие-либо вопросы, вы можете связаться со мной по следующим контактам:',
   image: 'https://i.imgur.com/CiHoHG6.jpeg?1',
   contact: [
-      
-        
     {
       id: 2,
       title: 'tg: @avocadohaas',

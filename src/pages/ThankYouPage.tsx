@@ -2,6 +2,7 @@ import React from 'react';
 import { SectionHeadline } from '../components/shared/Typography/SectionHeadline';
 import { Button } from '../components/shared/Button/Button';
 import { useNavigate } from 'react-router-dom';
+import { Container } from '../components/shared/Container';
 
 const ThankYouPage: React.FC = () => {
 
@@ -11,7 +12,7 @@ const ThankYouPage: React.FC = () => {
   }
 
   return (
-    <div className='container mx-auto py-40 text-center'>
+    <Container>
       <SectionHeadline sectionHeadline='Thank You' />
       <p className='pt-4'>Your order has been successfully sent.</p>
       <Button 
@@ -19,7 +20,7 @@ const ThankYouPage: React.FC = () => {
         text='Back to Shopping' 
         variant='primary' 
         className='mt-10' />
-    </div>
+    </Container>
   );
 };
 
