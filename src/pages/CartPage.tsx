@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { SectionHeadline } from '../components/shared/Typography/SectionHeadline';
 import { Button } from '../components/shared/Button/Button';
@@ -27,10 +27,6 @@ const CartPage: React.FC = () => {
   const {modal, open, close} = useContext(ModalContext);
   const { incrementQuantity, decrementQuantity } = useCartQuantity();
   const isMobile = useMobile();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <Container>
