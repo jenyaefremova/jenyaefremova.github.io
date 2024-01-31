@@ -11,9 +11,9 @@ export function Navigation() {
   return (
     <nav className="h-[50px] fixed w-full z-10 flex justify-end px-5 bg-lime-100 border-b shadow-sm items-center text-black">
       {!isMobile && 
-      (<div className='flex gap-3'>  
+      (<ul className='flex gap-3'>  
         <Links onLinkClick={() => {}}/>
-      </div>)}
+      </ul>)}
       {isMobile && <BurgerMenu />}
     </nav>
   )
