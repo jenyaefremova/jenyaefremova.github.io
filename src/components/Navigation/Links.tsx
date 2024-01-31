@@ -12,7 +12,7 @@ export function Links({ onLinkClick }: { onLinkClick: () => void }) {
   return (
     <>  
       {links.map(link => (
-        <li className='inline-flex items-center transition-all duration-300'>
+        <li className='inline-flex items-center transition-all duration-300 hover:text-lime-700'>
           <NavLink 
             key={link.to}
             to={link.to} 
