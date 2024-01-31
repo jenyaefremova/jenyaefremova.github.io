@@ -11,6 +11,10 @@ export interface IProduct {
   }
 }
 
+export interface CartItem extends IProduct {
+  quantity: number;
+}
+
 export interface IPerson {
   id?: number;
   title: string

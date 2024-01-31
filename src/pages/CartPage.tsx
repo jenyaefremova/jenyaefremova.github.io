@@ -45,7 +45,7 @@ const CartPage: React.FC = () => {
           <p className='pt-4 text-bold max-w-xl'>Total items: {totalQuantaty}</p>
 
           {modal && <Modal title="Checkout" onClose={close}>
-            <CheckoutForm />
+            <CheckoutForm cartItems={Object.values(groupedItems)} totalPrice={totalPrice} totalQuantaty={totalQuantaty} />
           </Modal>}
    
           <Button 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { IPerson, ITechnology } from '../models';
 import { Button } from './shared/Button/Button';
-import { Technology } from './Technology/Technology';
+import { Technology } from './Technology';
 import { useGoToSection } from '../hooks/useGoToSection';
 
 interface PersonProps {

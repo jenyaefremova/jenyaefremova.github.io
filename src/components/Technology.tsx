@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { ITechnology } from '../../models';
-import { getTechnologyIcon } from './getTechnologyIcon';
+import { ITechnology } from '../models';
+import { getTechnologyIcon } from '../utils/getTechnologyIcon';
 
 interface TechnologyProps {
   technologies: ITechnology[];
