@@ -1,12 +1,27 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-export function Links({onLinkClick}: {onLinkClick: () => void}) {
+export function Links({ onLinkClick }: { onLinkClick: () => void }) {
+
+  const links = [
+    { to: "/", text: "About me" },
+    { to: "/portfolio", text: "Пример приложения" },
+    { to: "/other", text: "Другие работы" }
+  ];
+
   return (
     <>  
-      <NavLink to="/" className={({ isActive }) => isActive ? 'underline underline-offset-2' : ''} onClick={onLinkClick}>About me</NavLink>
-      <NavLink to="/portfolio" className={({ isActive }) => isActive ? 'underline underline-offset-2' : ''} onClick={onLinkClick}>Пример приложения</NavLink>
-      <NavLink to="/other" className={({ isActive }) => isActive ? 'underline underline-offset-2' : ''} onClick={onLinkClick}>Другие работы</NavLink>
+      {links.map(link => (
+        <li className='inline-flex items-center transition-all duration-300'>
+          <NavLink 
+            key={link.to}
+            to={link.to} 
+            className={({ isActive }) => isActive ? 'underline underline-offset-4' : ''} 
+            onClick={onLinkClick}>
+            {link.text}
+          </NavLink>
+        </li>
+      ))}
     </>
   );
 }
