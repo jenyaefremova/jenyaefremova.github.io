@@ -24,9 +24,9 @@ const Dropdown: React.FC<DropdownProps> = ({ options, className, onSelect }) => 
         {selectedOption || 'Sort by'}
       </button>
       {isOpen && (
-        <ul className="flex flex-col w-full border shadow bg-white">
+        <ul className="flex flex-col w-full border shadow bg-white z-10">
           {options.map((option) => (
-            <li key={option} onClick={() => handleOptionClick(option)} className='px-4 py-2 cursor-pointer'>
+            <li key={option} onClick={() => handleOptionClick(option)} className='px-4 py-2 cursor-pointer hover:bg-lime-100'>
               <span className={option === selectedOption ? 'font-bold' : ''}>{option}</span>
             </li>
           ))}
